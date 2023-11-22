@@ -5,19 +5,16 @@
  */
 package thp1;
 
-import java.util.Vector;
-import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author LAB 1_10
  */
-public class spps extends javax.swing.JInternalFrame {
+public class tampilanutamasiswa extends javax.swing.JFrame {
 
     /**
-     * Creates new form spps
+     * Creates new form tampilanutamasiswa
      */
-    public spps() {
+    public tampilanutamasiswa() {
         initComponents();
     }
 
@@ -30,7 +27,6 @@ public class spps extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
@@ -41,9 +37,10 @@ public class spps extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel2.setText("TAHUN");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -56,10 +53,19 @@ public class spps extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jLabel3.setText("NOMINAL");
+        jLabel3.setEnabled(false);
+
+        jTextField1.setEnabled(false);
+
+        jTextField2.setEnabled(false);
+
+        jTextField3.setEnabled(false);
 
         jButton1.setText("BATAL");
+        jButton1.setEnabled(false);
 
         jButton2.setText("HAPUS");
+        jButton2.setEnabled(false);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -67,15 +73,21 @@ public class spps extends javax.swing.JInternalFrame {
         });
 
         jButton3.setText("EDIT");
+        jButton3.setEnabled(false);
 
         jButton4.setText("SIMPAN");
+        jButton4.setEnabled(false);
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton4MouseClicked(evt);
             }
         });
 
+        jLabel2.setText("TAHUN");
+        jLabel2.setEnabled(false);
+
         jLabel1.setText("ID SPP");
+        jLabel1.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,26 +155,60 @@ public class spps extends javax.swing.JInternalFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-        DefaultTableModel spp = (DefaultTableModel) jTable1.getModel();
-        int row = jTable1.getSelectedRow();
-        spp.removeRow(row);
+//        DefaultTableModel spp = (DefaultTableModel) jTable1.getModel();
+//        int row = jTable1.getSelectedRow();
+//        spp.removeRow(row);
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
-        DefaultTableModel spp = (DefaultTableModel) jTable1.getModel();
-        Vector spp1 = new Vector();
-        spp1.add(jTextField1.getText());
-        spp1.add(jTextField2.getText());
-        spp1.add(jTextField3.getText());
-        
-        spp.addRow(spp1);
-        jTable1.setModel(spp);
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
+//        DefaultTableModel spp = (DefaultTableModel) jTable1.getModel();
+//        Vector spp1 = new Vector();
+//        spp1.add(jTextField1.getText());
+//        spp1.add(jTextField2.getText());
+//        spp1.add(jTextField3.getText());
+//
+//        spp.addRow(spp1);
+//        jTable1.setModel(spp);
+//        jTextField1.setText("");
+//        jTextField2.setText("");
+//        jTextField3.setText("");
     }//GEN-LAST:event_jButton4MouseClicked
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(tampilanutamasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(tampilanutamasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(tampilanutamasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(tampilanutamasiswa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new tampilanutamasiswa().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
